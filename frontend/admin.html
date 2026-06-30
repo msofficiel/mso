@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Espace admin — Groupe Albiher</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="admin-style.css">
+</head>
+<body>
+
+<!-- VUE CONNEXION -->
+<div id="loginView">
+  <div class="login-box">
+    <span class="mono">Espace privé</span>
+    <h1>Connexion admin</h1>
+    <form id="loginForm">
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" required autocomplete="username">
+      </div>
+      <div class="field">
+        <label for="password">Mot de passe</label>
+        <input type="password" id="password" required autocomplete="current-password">
+      </div>
+      <button type="submit" class="btn">Se connecter</button>
+      <p class="login-error" id="loginError"></p>
+    </form>
+  </div>
+</div>
+
+<!-- VUE TABLEAU DE BORD -->
+<div id="dashView">
+  <header class="admin-bar">
+    <div class="brand">Groupe <span>Albiher</span> — admin</div>
+    <button class="logout" id="logoutBtn">Déconnexion</button>
+  </header>
+  <div class="dash-wrap">
+    <div class="dash-head">
+      <h1>Demandes reçues</h1>
+      <div class="dash-stats">
+        <div class="dstat"><div class="num" id="statTotal">0</div><div class="label">Total</div></div>
+        <div class="dstat"><div class="num" id="statNew">0</div><div class="label">Nouveaux</div></div>
+      </div>
+    </div>
+    <div class="msg-list" id="msgList"></div>
+  </div>
+</div>
+
+<script src="admin-script.js"></script>
+
+</body>
+</html>
