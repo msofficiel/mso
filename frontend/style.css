@@ -230,3 +230,23 @@
   @media (prefers-reduced-motion: reduce){
     *{animation:none !important;transition:none !important;}
   }
+
+  /* FAQ ACCORDEON */
+.faq-list{border-top:1px solid var(--deep);}
+.faq-item{border-bottom:1px solid var(--line);}
+.faq-q{
+  width:100%;background:none;border:none;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:22px 0;cursor:pointer;
+  font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:1.1rem;
+  color:var(--deep);text-align:left;
+}
+.faq-q:hover{color:var(--accent);}
+.faq-icon{font-size:1.4rem;color:var(--accent);transition:transform .3s;}
+.faq-a{
+  max-height:0;overflow:hidden;
+  transition:max-height .35s ease, padding .3s ease;
+}
+.faq-a p{padding-bottom:20px;color:var(--ink-soft);font-size:0.98rem;}
+.faq-item.open .faq-a{max-height:200px;}
+.faq-item.open .faq-icon{transform:rotate(45deg);}
