@@ -13,6 +13,8 @@ const JWT_SECRET = process.env.JWT_SECRET || 'cle-secrete-a-changer-en-prod';
 app.use(cors());
 app.use(express.json());
 
+app.use(express.static('frontend'));
+
 // ---------- ROUTE 1 : recevoir un message depuis le formulaire du site public ----------
 app.post('/api/contact', (req, res) => {
   const { name, email, type, message } = req.body;
